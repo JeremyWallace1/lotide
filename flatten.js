@@ -1,11 +1,11 @@
 const assertArraysEqual = function(array1, array2) {
-  const matching = eqArrays(array1, array2); 
+  const matching = eqArrays(array1, array2);
   console.log(`The two arrays are equal: ${matching}`);
 };
 
 const eqArrays = function(array1, array2) {
   let comparison = false;
-  if (array1.length != array2.length) {
+  if (array1.length !== array2.length) {
     comparison = false;
     return comparison;
   }
