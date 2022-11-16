@@ -30,6 +30,7 @@ const middle = function(array) {
   let middleArray = [];
   let middleNum = 0;
   if (array.length <= 2) {
+    middleArray = [];
   } else if (array.length % 2 !== 0) {
     middleNum = Math.floor(array.length / 2);
     middleArray.push(array[middleNum]);
