@@ -4,17 +4,21 @@ const assertArraysEqual = function(array1, array2) {
 };
 
 const eqArrays = function(array1, array2) {
-  let comparison = false;
-  if (array1.length != array2.length) {
+  let comparison = (array1 === array2);
+  
+  if (!array1.length && !array2.length && Array.isArray(array1) && Array.isArray(array2)) { //captures empty arrays
+    comparison = true;
+  } else if (array1.length !== array2.length) {
     comparison = false;
-    return comparison;
-  }
-  for (let i = 0; i < array1.length; i++) {
-    comparison = (array1[i] === array2[i]);
-    if (comparison === false) {
-      return comparison;
+  } else {
+    for (let i = 0; i < array1.length; i++) {
+      comparison = (array1[i] === array2[i]);
+      if (comparison === false) {
+        break;
+      }
     }
   }
+  //console.log (`array1 is ${array1.length} items long.\narray2 is ${array2.length} items long.\narray1 is ${array1}\narray2 is ${array2}\nThe comparison is ${comparison}`);
   return comparison;
 };
 
