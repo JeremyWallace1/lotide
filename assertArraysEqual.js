@@ -1,6 +1,6 @@
 const assertArraysEqual = function(array1, array2) {
   const matching = eqArrays(array1, array2); 
-  console.log(`Assertion Passed: ${matching}`);
+  console.log(`The two arrays are equal: ${matching}`);
 };
 
 const eqArrays = function(array1, array2) {
