@@ -23,7 +23,7 @@ const eqArrays = function(array1, array2) {
 };
 const letterPositions = function(sentence) {
   const results = {};
-  for (i = 0; i < sentence.length; i++) {
+  for (let i = 0; i < sentence.length; i++) {
     if (results[sentence[i]]) {
       results[sentence[i]].push(i);
     } else {
@@ -38,4 +38,4 @@ const result1 = letterPositions("hello");
 assertArraysEqual(result1["h"], [0]);
 assertArraysEqual(result1["e"], [1]);
 assertArraysEqual(result1["l"], [2, 3]);
-assertArraysEqual(result1["o"], [4])
+assertArraysEqual(result1["o"], [4]);

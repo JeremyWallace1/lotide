@@ -19,7 +19,7 @@ const countOnly = function(allItems, itemsToCount) {
       console.log(newObject);
     }
   }
-  return(newObject);
+  return newObject;
 };
 
 const firstNames = [
