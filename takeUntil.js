@@ -29,7 +29,7 @@ const takeUntil = function(array, callback) {
   // ...
   // console.log('the array is: ', array);
   // console.log('the callback is: ', callback);
-  newArray = [];
+  const newArray = [];
   for (const item of array) {
     if (!callback(item)) {
       newArray.push(item);
