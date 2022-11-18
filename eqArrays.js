@@ -1,18 +1,15 @@
 const eqArrays = function(array1, array2) {
   let comparison = (array1 === array2);
-  
-  if (!array1.length && !array2.length && Array.isArray(array1) && Array.isArray(array2)) { //captures empty arrays
+  const length1 = array1.length;
+  const length2 = array2.length;
+  if (!length1 && !length2 && Array.isArray(array1) && Array.isArray(array2) || (length1 !== length2)) { //captures empty arrays
     return false;
-  } else if (array1.length !== array2.length) {
-    return false;
-  } else {
-    for (let i = 0; i < array1.length; i++) {
-      if (array1[i] !== array2[i]) {
-        return false;
-      }
+  }
+  for (let i = 0; i < length1; i++) {
+    if (array1[i] !== array2[i]) {
+      return false;
     }
   }
-  //console.log (`array1 is ${array1.length} items long.\narray2 is ${array2.length} items long.\narray1 is ${array1}\narray2 is ${array2}\nThe comparison is ${comparison}`);
   return true;
 };
 
