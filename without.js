@@ -9,16 +9,14 @@ const eqArrays = function(array1, array2) {
   let comparison = false;
   // console.log("array lengths: " + array1.length, array2.length)
   if (array1.length !== array2.length) {
-    comparison = false;
-    return comparison;
+    return false
   }
   for (let i = 0; i < array1.length; i++) {
-    comparison = (array1[i] === array2[i]);
-    if (comparison === false) {
-      return comparison;
+    if (array1[i] !== array2[i]) {
+      return false;
     }
   }
-  return comparison;
+  return true;
 };
 
 const without = function(source, itemsToRemove) {
