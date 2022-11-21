@@ -2,4 +2,4 @@ const head = function(array) { // The head function should not return the first 
   return array[0];
 };
 
-module.exports = head; //export the function
+module.exports = head; //exports the function

@@ -12,5 +12,4 @@ const flatten = function(array) {
   }
   return newArray;
 };
-
-module.exports = flatten;
+module.exports = flatten; //exports the function
