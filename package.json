@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@jeremywallace/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "lotide",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/JeremyWallace1/lotide.git"
   },
-  "author": "",
+  "author": "Jeremy Wallace",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/JeremyWallace1/lotide/issues"
