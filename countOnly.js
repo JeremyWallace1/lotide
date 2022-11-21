@@ -8,10 +8,9 @@ const countOnly = function(allItems, itemsToCount) {
       } else {
         newObject[item] = 1;
       }
-      console.log(newObject);
     }
   }
   return newObject;
 };
 
-module.exports = countOnly; //exports the function
+module.exports = countOnly; //export the function
