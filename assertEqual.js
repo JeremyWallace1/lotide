@@ -6,4 +6,4 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-module.exports = assertEqual; //exports the function
+//module.exports = assertEqual; //exports the function
