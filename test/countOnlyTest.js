@@ -18,13 +18,13 @@ describe("#countOnly", () => {
   it("returns 1 if ['Jason']", () => {
     assert.equal(result1["Jason"], 1);
   });
-  it ("return undefined if ['Karima']", () => {
+  it("return undefined if ['Karima']", () => {
     assert.equal(result1["Karima"], undefined);
   });
-  it ("return 2 if ['Fang']", () => {
+  it("return 2 if ['Fang']", () => {
     assert.equal(result1["Fang"], 2);
   });
-  it ("return undefined if ['Agouhanna']", () => {
+  it("return undefined if ['Agouhanna']", () => {
     assert.equal(result1["Agouhanna"], undefined);
   });
 });
