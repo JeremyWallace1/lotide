@@ -29,4 +29,13 @@ describe("#eqArrays", () => {
   it("returns false if [], [] are not equal", () => {
     assert.equal(_.eqArrays([], []), false); // => should FAIL
   });
+  it("returns true if [[2, 3], [4]], [[2, 3], [4]] are equal", () => {
+    assert.equal(_.eqArrays([[2, 3], [4]], [[2, 3], [4]]), true); // => should PASS
+  });
+  it("returns false if [[2, 3], [4]], [[2, 3], [4, 5]] are NOT equal", () => {
+    assert.equal(_.eqArrays([[2, 3], [4]], [[2, 3], [4, 5]]), false); // => should PASS
+  });
+  it("returns false if [[2, 3], [4]], [[2, 3], 4] are not equal", () => {
+    assert.equal(_.eqArrays([[2, 3], [4]], [[2, 3], 4]), false); // => should PASS
+  });
 });
