@@ -21,4 +21,21 @@ describe("#middle", () => {
   it("returns false for cd, cd2", () => {
     assert.equal(_.eqObjects(cd, cd2), false); // => true
   });
+
+  it("returns true for { a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }", () => {
+    assert.equal(_.eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), true); // => true
+  });
+
+  it("returns false for { a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }", () => {
+    assert.equal(_.eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), false); // => false
+  });
+
+  it("returns false for { a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }", () => {
+    assert.equal(_.eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }), false); // => false
+  });
+
+  it("returns true for { a: { x: 0, z: { y: 1 } }, b: 2 }, { a: { x: 0, z: { y: 1 } }, b: 2 }", () => {
+    assert.equal(_.eqObjects({ a: { x: 0, z: { y: 1 } }, b: 2 }, { a: { x: 0, z: { y: 1 } }, b: 2 }), true); // => true
+  });
+
 });
