@@ -17,7 +17,7 @@ describe("#head", () => {
   it("returns 'bananas' for ['bananas']", () => {
     assert.strictEqual(_.head(["bananas"]), "bananas");
   });
-  it("returns 5 for []", () => {
-    assert.strictEqual(_.head([]), 5);
+  it("returns undefined for []", () => {
+    assert.strictEqual(_.head([]), undefined);
   });
 });
